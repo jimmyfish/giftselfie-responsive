@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="public/css/giftselfie.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown mr-4">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="flag-icon flag-icon-gb"></i> EN
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item active" href="#">
+                            <i class="flag-icon flag-icon-gb"></i> EN
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="flag-icon flag-icon-th"></i> TH
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="flag-icon flag-icon-ru"></i> RU
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item my-auto">
+                    <a href="#" class="btn btn-primary btn-sm btn-retailer">Are You a Retailer ?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row mt-2">
+            <div class="col m-4">
+                <img src="http://customer-staging.giftselfie.com/img/homepage/en/gs-lg-lady.jpg" alt="Giftselfie Lady"
+                    class="img-fluid">
+            </div>
+            <div class="col">
+                <img src="http://customer-staging.giftselfie.com/img/homepage/en/gs-lg-logo-slogan.jpg" alt="Giftselfie Logo"
+                    class="img-fluid">
+            </div>
+            <div class="col">
+                <img src="http://customer-staging.giftselfie.com/img/homepage/en/gs-video.jpg" alt="Giftselfie Video"
+                    class="img-fluid">
+
+                <div id="form-wrapper" class="mt-4">
+                    <div class="col-xs-12">
+                        <ul class="nav nav-justified u-nav-primary" role="tablist" data-target="nav-4-1-primary-hor-justified"
+                            data-tabs-mobile-type="slide-up-down" data-btn-classes="btn btn-md btn-block u-btn-outline-primary">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/">Create Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="http://customer-staging.giftselfie.com/sign-in">Sign In</a>
+                            </li>
+                        </ul>
+                        <div id="nav-4-1-primary-hor-justified" class="tab-content  g-bg-white">
+                            <div class="tab-pane fade show active" style="padding: 10px;">
+
+                                <form class="g-py-10" method="POST" action=" http://customer-staging.giftselfie.com/register">
+                                    <input type="hidden" name="_token" value="hLeEyTTfI9xe30SEXlyImTz4mlEYyEPai4dkUJIf">
+                                    <div class="row">
+                                        <div class="mb-4 col-6">
+                                            <label class="g-color-gray-dark-v2 g-font-weight-600 ">First Name</label>
+                                            <input name="first_name" value="" class="form-control form-control-danger g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15"
+                                                placeholder="Jessica">
+                                        </div>
+                                        <div class="mb-4 col-6">
+                                            <label class="g-color-gray-dark-v2 g-font-weight-600 ">Last Name</label>
+                                            <input name="last_name" value="" class="form-control form-control-danger g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="mb-4 col-6">
+                                            <label class="g-color-gray-dark-v2 g-font-weight-600 ">Nickname (short
+                                                name)</label>
+                                            <input name="nick_name" value="" class="form-control form-control-danger g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15"
+                                                placeholder="Jess">
+                                        </div>
+                                        <div class="mb-4 col-6">
+                                            <label class="g-color-gray-dark-v2 g-font-weight-600 ">Gender</label>
+                                            <br>
+
+                                            <select name="gender" id="gender" class="form-control g-px-15">
+                                                <option value="">Select Gender</option>
+                                                <option value="1">Female</option>
+                                                <option value="0">Male</option>
+                                                <option value="3">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <label class="g-color-gray-dark-v2 g-font-weight-600 ">Email</label>
+                                        <input name="email" value="" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15"
+                                            type="email">
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="mb-4 col-6">
+                                            <label class="g-color-gray-dark-v2 g-font-weight-600 ">Create Password</label>
+                                            <input name="password" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15"
+                                                type="password">
+                                        </div>
+                                        <div class="mb-4 col-6">
+                                            <label class="g-color-gray-dark-v2 g-font-weight-600 ">Confirm Password</label>
+                                            <input name="password_confirmation" class="form-control g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15"
+                                                type="password">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-12" id="loading-country-select" style="display: none;">
+                                        <label id="country-label" class="g-color-gray-dark-v2 g-font-weight-600 ">Your
+                                            Mobile Number</label>
+                                        <input class="loading form-control g-color-black g-bg-white g-bg-white--focus g-brd-primary g-brd-primary--hover rounded g-py-10 g-px-15"
+                                            type="text">
+                                    </div>
+                                    
+                                    <div class="row justify-content-between mb-12">
+                                        <div class="col-12 align-self-center text-right">
+                                            <button class="btn btn-lg btn-primary rounded g-py-16 g-px-25 btn-block">Create
+                                                Account</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
