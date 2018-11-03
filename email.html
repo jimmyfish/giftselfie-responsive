@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/giftselfie.css') }}">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        #email-template .btn {
+          padding: 10px 50px;
+        }
+
+        #email-template .btn-primary {
+          background-color: #D7001D;
+          border: 1px solid #D7001D;
+        }
+        #email-template {
+          font-size: 14px;
+          padding-top: 50px;
+        }
+
+        #email-template .top-section {
+          background-color: #D7001D;
+          text-align: right;
+          padding: 15px 25px;
+          border-top-left-radius: 7.5px;
+          border-top-right-radius: 7.5px;
+        }
+
+        #email-template .top-section .avatar {
+          width: 40px;
+          height: 40px;
+          vertical-align: middle;
+          margin-left: 5px;
+          border-radius: 50%;
+        }
+
+        #email-template .bottom-section {
+          background-color: #ecf0f1;
+          padding: 20px 50px 10px;
+          border-bottom-right-radius: 7.5px;
+          border-bottom-left-radius: 7.5px;
+        }
+
+        #email-template .bottom-section .bottom-title {
+          margin-bottom: 20px;
+        }
+
+        #email-template .bottom-section .img-container {
+          width: 100%;
+          margin-top: 25px;
+          margin-bottom: 25px;
+        }
+
+        #email-template .bottom-section .img-container .img-illustration {
+          width: 25%;
+          height: auto;
+        }
+
+        #email-template .bottom-section p {
+          line-height: 30px;
+        }
+
+        #email-template .bottom-section p.text-copyright {
+          margin-top: 20px;
+          margin-bottom: 0;
+          font-size: .8em;
+          font-weight: 300;
+        }
+    </style>
+</head>
+<body id="email-template">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="top-section">
+                <span class="text-white text-500">Giftselfie's Guest</span>
+                <img src="https://image.flaticon.com/icons/svg/168/168724.svg" alt="Avatar" class="avatar">
+            </div>
+        </div>
+        <div class="col-md-6 offset-md-3">
+            <div class="bottom-section text-center">
+                <div class="img-container">
+                    <img src="{{ asset('img/gs-logo-slogan.png') }}" alt="Giftselfie logo" class="img-illustration">
+                </div>
+                <h4 class="text-center bottom-title">Welcome to Giftselfie</h4>
+
+                @yield('content')
+
+                <p class="text-copyright">&copy; 2018 Giftselfie Co. Ltd., 50 GMM Grammy Place, Bangkok 10110</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
